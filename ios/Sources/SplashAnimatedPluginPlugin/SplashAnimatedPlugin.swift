@@ -4,7 +4,6 @@ import UIKit
 
 @objc(SplashAnimatedPlugin)
 public class SplashAnimatedPlugin: CAPPlugin {
-
     var splashView: UIView?
     var imageView: UIImageView?
 
@@ -51,4 +50,8 @@ public class SplashAnimatedPlugin: CAPPlugin {
             call.resolve()
         }
     }
+
+    @objc public func echo(_ value: String) -> String {
+       return value
+   }
 }

@@ -6,7 +6,9 @@ public class SplashAnimatedPluginPlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "SplashAnimatedPluginPlugin"
     public let jsName = "SplashAnimatedPlugin"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "showSplash", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "hideSplash", returnType: CAPPluginReturnPromise),
     ]
     private let implementation = SplashAnimatedPlugin()
 
@@ -16,5 +18,15 @@ public class SplashAnimatedPluginPlugin: CAPPlugin, CAPBridgedPlugin {
         call.resolve([
             "value": implementation.echo(value)
         ])
+    }
+
+    @objc func showSplash(_ call: CAPPluginCall) {
+        implementation.showSplash(call)
+        call.resolve([:])
+    }
+
+    @objc func hideSplash(_ call: CAPPluginCall) {
+        implementation.hideSplash(call)
+        call.resolve([:])
     }
 }
