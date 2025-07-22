@@ -2,8 +2,8 @@ import Foundation
 import Capacitor
 import UIKit
 
-@objc(PluginSplashAnimated)
-public class PluginSplashAnimated: CAPPlugin {
+@objc(SplashAnimatedPlugin)
+public class SplashAnimatedPlugin: CAPPlugin {
 
     var splashView: UIView?
     var imageView: UIImageView?
