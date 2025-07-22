@@ -71,7 +71,8 @@
   },
   "capacitor": {
     "ios": {
-      "src": "ios"
+      "src": "ios",
+      "pluginClass": "SplashAnimatedPlugin"
     },
     "android": {
       "src": "android"
