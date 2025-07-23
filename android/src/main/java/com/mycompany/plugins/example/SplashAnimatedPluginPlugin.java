@@ -41,7 +41,7 @@ public class SplashAnimatedPluginPlugin extends Plugin {
                 InputStream stream = new ByteArrayInputStream(decodedBytes);
 
                 splashImageView = new ImageView(activity);
-                splashImageView.setScaleType(ImageView.ScaleType.FIT_XY);
+                splashImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
                 splashImageView.setLayoutParams(new FrameLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.MATCH_PARENT
